@@ -1,0 +1,32 @@
+/* โครงสร้างหลัก */
+.container {
+  display: flex; /* ใช้ flexbox */
+  height: 100vh; /* เต็มความสูงของหน้าจอ */
+  width: 100vw; /* เต็มความกว้างของหน้าจอ */
+  overflow: hidden; /* ปิด scroll container */
+}
+
+/* ฝั่งซ้าย (Fixed Pane) */
+.left-pane {
+  width: 50%; /* ครึ่งหนึ่งของหน้าจอ */
+  height: 100%;
+  background-color: #2c3e50; /* สีเข้ม */
+  position: fixed; /* คงที่ตำแหน่ง */
+  left: 0; /* ติดขอบซ้าย */
+  top: 0; /* ติดขอบบน */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* จัดตำแหน่งกลาง */
+  z-index: 1; /* ให้อยู่ด้านบนสุด */
+}
+
+/* ฝั่งขวา (Scrollable Pane) */
+.right-pane {
+  margin-left: 50%; /* ดันไปทางขวาครึ่งหนึ่ง */
+  width: 50%; /* ครึ่งหนึ่งของหน้าจอ */
+  height: 100vh; /* เต็มความสูงของหน้าจอ */
+  background-color: #34495e; /* สีอ่อนกว่า */
+  overflow-y: auto; /* เพิ่ม scroll bar แนวตั้ง */
+  padding: 20px;
+  box-sizing: border-box;
+}

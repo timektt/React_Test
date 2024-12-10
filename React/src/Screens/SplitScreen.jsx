@@ -1,6 +1,6 @@
 import React from 'react';
 import './SplitScreen.css';
-import Header from './Header';
+import Header from './Header.jsx';
 
 const SplitScreen = () => {
   return (
